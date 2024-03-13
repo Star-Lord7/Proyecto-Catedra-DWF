@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="3.0" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                                  https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_3_0.xsd">
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Cliente</from-outcome>
+            <to-view-id>/cliente.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cajero</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Gerente</from-outcome>
+            <to-view-id>/gerente.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/cliente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>cerrarsesion</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--Comienza Parte de Samuel-->
+    <navigation-rule>
+        <from-view-id>/Cajero/cajero.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>agregarCliente</from-outcome>
+            <to-view-id>/Cajero/agregarCliente.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>prestamos</from-outcome>
+            <to-view-id>/Cajero/Prestamos.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cerrarsesion</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cajero/agregarCliente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>clienteAgregado</from-outcome>
+            <to-view-id>/Cajero/clienteAgregado.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>regresar</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cajero/clienteAgregado.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>regresar</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cajero/Prestamos.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>aprobar</from-outcome>
+            <to-view-id>/Cajero/aprobarPrestamo.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>denegar</from-outcome>
+            <to-view-id>/Cajero/denegarPrestamo.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>regresar</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cajero/aprobarPrestamo.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>prestamoAprobado</from-outcome>
+            <to-view-id>/Cajero/prestamoAprobado.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>regresar</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cajero/prestamoAprobado.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>regresar</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cajero/denegarPrestamo.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>regresar</from-outcome>
+            <to-view-id>/Cajero/cajero.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!--Finaliza Parte de Samuel-->
+
+    <navigation-rule>
+        <from-view-id>/gerente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>cerrarsesion</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>
