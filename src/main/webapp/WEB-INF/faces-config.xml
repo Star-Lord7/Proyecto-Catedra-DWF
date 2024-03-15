@@ -7,7 +7,7 @@
         <from-view-id>/login.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>Cliente</from-outcome>
-            <to-view-id>/cliente.xhtml</to-view-id>
+            <to-view-id>/Cliente/cliente.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>Cajero</from-outcome>
@@ -18,6 +18,63 @@
             <to-view-id>/gerente.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <!--Comienza Parte de Pablo-->
+    <navigation-rule>
+        <from-view-id>/Cliente/cliente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Transferir</from-outcome>
+            <to-view-id>/Cliente/Transferir.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Retirar</from-outcome>
+            <to-view-id>/Cliente/Retirar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Depositar</from-outcome>
+            <to-view-id>/Cliente/Depositar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cerrarsesion</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cliente/Depositar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Regresar</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cliente/Transferir.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>transferea</from-outcome>
+            <to-view-id>/Cliente/transferenciahecha.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Regresar</from-outcome>
+            <to-view-id>/Cliente/cliente.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/Cliente/Retirar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Retirorealizado</from-outcome>
+            <to-view-id>/Cliente/Retirar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Regresar</from-outcome>
+            <to-view-id>/Cliente/cliente.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+
 
     <navigation-rule>
         <from-view-id>/cliente.xhtml</from-view-id>
