@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>Registrar Empleados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</h:head>
+
+<h:body>
+    <div class="container">
+        <h:form>
+            <div class="mb-3">
+                <h:outputLabel for="nombre" class="form-label" value="Nombre:"/>
+                <h:inputText id="nombre" class="form-control" value="#{agregarEmpleadoBean.nombres}"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="apellido" class="form-label" value="Apellido:"/>
+                <h:inputText id="apellido" class="form-control" value="#{agregarEmpleadoBean.apellidos}"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="cargo" class="form-label" value="Cargo:"/>
+                <h:inputText id="cargo" class="form-control" value="#{agregarEmpleadoBean.cargo}"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="salario" class="form-label" value="Salario:"/>
+                <h:inputText id="salario" class="form-control" value="#{agregarEmpleadoBean.salario}"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="dui" class="form-label" value="DUI:"/>
+                <h:inputText id="dui" class="form-control" value="#{agregarEmpleadoBean.dui}"/>
+            </div>
+
+            <h:commandButton class="btn btn-primary" value="Registrar" action="#{agregarEmpleadoBean.registrarEmpleado}"/>
+            <h:commandButton class="btn btn-danger" value="Regresar" action="regresar"/>
+        </h:form>
+
+        <h2>Lista de Empleados</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cargo</th>
+                <th>Salario</th>
+                <th>DUI</th>
+            </tr>
+            </thead>
+            <tbody>
+            <ui:repeat value="#{agregarEmpleadoBean.empleados}" var="empleado">
+                <tr>
+                    <td>#{empleado.nombres}</td>
+                    <td>#{empleado.apellidos}</td>
+                    <td>#{empleado.cargo}</td>
+                    <td>#{empleado.salario}</td>
+                    <td>#{empleado.dui}</td>
+                </tr>
+            </ui:repeat>
+            </tbody>
+        </table>
+    </div>
+</h:body>
+
+</html>
