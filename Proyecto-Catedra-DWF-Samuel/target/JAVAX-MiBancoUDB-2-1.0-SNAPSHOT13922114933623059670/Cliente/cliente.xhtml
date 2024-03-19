@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: samue
+  Date: 10/3/2024
+  Time: 19:30
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>LoginCliente</title>
+</h:head>
+
+<h:body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+
+    <div class="container text-center">
+        <h:outputLabel styleClass="display-4 mb-4">Cliente</h:outputLabel>
+
+        <h:form>
+            <div class="btn-group">
+
+                <h:commandButton class="btn btn-success"  value="Transferencias" action="Transferir"/>
+                <h:commandButton class="btn btn-success" value="Depósitos" action="Depositar"/>
+                <h:commandButton class="btn btn-success"  value="Retiro de Dinero" action="Retirar"/>
+                <h:commandButton class="btn btn-success"  value="Cerrar Sesión" action="cerrarsesion"/>
+            </div>
+        </h:form>
+    </div>
+
+</h:body>
+
+</html>

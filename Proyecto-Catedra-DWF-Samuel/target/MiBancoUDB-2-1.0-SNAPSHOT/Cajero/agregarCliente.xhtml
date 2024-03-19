@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: samue
+  Date: 12/3/2024
+  Time: 15:07
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Agregar Cliente</title>
+</h:head>
+
+<h:body>
+    <div class="container">
+    <h:outputText class="fs-1 fw-bold text-uppercase text-center" value="Agregar Cliente" />
+
+    <h:form styleClass="form-group">
+
+        <div class="form-group">
+            <h:outputLabel for="nombres" styleClass="form-label"
+                           value="Nombres: "/>
+            <h:inputText id="nombres" styleClass="form-control"
+                         value="#{agregarClienteBean.nombres}"/>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="apellidos" styleClass="form-label"
+                           value="Apellidos: "/>
+            <h:inputText id="apellidos" styleClass="form-control"
+                         value="#{agregarClienteBean.apellidos}"/>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="dui" styleClass="form-label"
+                           value="DUI: "/>
+            <h:inputText id="dui" styleClass="form-control"
+                         value="#{agregarClienteBean.dui}"/>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="direccion" styleClass="form-label"
+                           value="Direccion: "/>
+            <h:inputText id="direccion" styleClass="form-control"
+                         value="#{agregarClienteBean.direccion}"/>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="fecha" styleClass="form-label"
+                           value="Fecha de Nacimiento: "/>
+            <h:inputText id="fecha" styleClass="form-control"
+                         value="#{agregarClienteBean.fechanac}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h:outputLabel for="profesion" styleClass="form-label"
+                           value="Profesion: "/>
+            <h:selectOneMenu id="profesion" styleClass="form-select"
+                             value="#{agregarClienteBean.profesion}">
+                <f:selectItem itemValue="estudiante" itemLabel="Estudiante"/>
+                <f:selectItem itemValue="empleado" itemLabel="Empleado"/>
+            </h:selectOneMenu>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="salario" styleClass="form-label"
+                           value="Salario: "/>
+            <h:inputText id="salario" styleClass="form-control"
+                         value="#{agregarClienteBean.salario}"/>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="usuario" styleClass="form-label"
+                           value="Usuario: "/>
+            <h:inputText id="usuario" styleClass="form-control"
+                         value="#{agregarClienteBean.usuario}"/>
+        </div>
+
+        <div class="form-group">
+            <h:outputLabel for="password" styleClass="form-label"
+                           value="Contraseña: "/>
+            <h:inputText id="password" styleClass="form-control"
+                         value="#{agregarClienteBean.password}"/>
+        </div>
+        <br/>
+        <div class="form-group">
+        <h:commandButton class="btn btn-success" value="Agregar Cliente" action="clienteAgregado"/>
+        <br/>
+        <h:commandButton class="btn btn-danger" value="Regresar" action="regresar"/>
+        </div>
+    </h:form>
+    </div>
+</h:body>
+
+</html>

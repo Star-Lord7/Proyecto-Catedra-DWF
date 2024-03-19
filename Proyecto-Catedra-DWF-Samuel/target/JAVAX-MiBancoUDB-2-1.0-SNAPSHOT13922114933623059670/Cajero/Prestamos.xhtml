@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: samue
+  Date: 12/3/2024
+  Time: 15:07
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Prestamos</title>
+</h:head>
+
+<h:body>
+    <div class="container">
+
+    <h:outputText class="fs-1 fw-bold text-uppercase text-center" value="Prestamos"/>
+    <br/>
+
+    <h:form styleClass="form-group">
+        <div class="form-group">
+        <h:outputText class="fs-3" value="Lista de Solicitudes de Prestamos"/>
+        <br/>
+        <h:commandButton class="btn btn-success" value="Aprobar Prestamo" action="aprobar"/>
+        <br/>
+        <h:commandButton class="btn btn-warning" value="Denegar Prestamo" action="denegar"/>
+        <br/>
+        <h:commandButton class="btn btn-danger" value="Regresar a Inicio" action="regresar"/>
+        </div>
+    </h:form>
+    </div>
+</h:body>
+
+</html>
